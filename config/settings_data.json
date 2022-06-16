@@ -1866,7 +1866,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "message": true,
+          "message": false,
           "message_text": "<div>ESSENTIALS 3 LAUNCHING 06.07.22<\/div>",
           "announcement_two": "FREE DOMESTIC SHIPPING ON ORDERS OVER $100",
           "color_bg": "#000000",
