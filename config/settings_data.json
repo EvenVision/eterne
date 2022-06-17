@@ -89,7 +89,7 @@
           "transparent_text_color": "#ffffff",
           "transparent_logo": "shopify:\/\/shop_images\/eterne.jpg",
           "transparent_logo_max_limit": 120,
-          "header_message": "",
+          "header_message": "FREE DOMESTIC SHIPPING ON ORDERS OVER $100",
           "header_message_url": "",
           "header_enable_account": true,
           "header_enable_search": true,
@@ -1866,7 +1866,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "message": true,
+          "message": false,
           "message_text": "<div>ESSENTIALS 3 LAUNCHING 06.07.22<\/div>",
           "announcement_two": "FREE DOMESTIC SHIPPING ON ORDERS OVER $100",
           "color_bg": "#000000",
