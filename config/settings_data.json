@@ -3588,6 +3588,50 @@
           "shop_margin_top": 0,
           "shop_margin_bottom": 25
         }
+      },
+      "dresses-collection": {
+        "type": "dresses-collection",
+        "blocks": {
+          "84c54c18-82f7-401a-bc91-68583b345ceb": {
+            "type": "shop_imgproducts2",
+            "settings": {
+              "image_autoheight_enable": true,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_product21": "tank-dress-maxi-cream",
+              "shop_product22": "tank-dress-maxi-black"
+            }
+          },
+          "3e430500-d6f0-446b-826f-a7ed25569f8d": {
+            "type": "shop_imgproducts3",
+            "settings": {
+              "image_autoheight_enable": true,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_product31": "long-sleeve-crewneck-dress-mini-cream",
+              "shop_product32": "tank-dress-mini-cream",
+              "shop_product33": "long-sleeve-turtleneck-dress-mini-cream-cream"
+            }
+          }
+        },
+        "block_order": [
+          "84c54c18-82f7-401a-bc91-68583b345ceb",
+          "3e430500-d6f0-446b-826f-a7ed25569f8d"
+        ],
+        "settings": {
+          "show_image": true,
+          "image_height": "use_screen_one_third",
+          "overlay_opacity": 20,
+          "parallax": false,
+          "align_text": "text-center",
+          "show_title": true,
+          "show_description": true,
+          "description_font_size": "rte rte--large",
+          "shop_margin_top": 0,
+          "shop_margin_bottom": 25
+        }
       }
     },
     "content_for_index": [
