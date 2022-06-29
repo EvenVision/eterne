@@ -3849,10 +3849,22 @@
               "shop_img22": "shopify:\/\/shop_images\/eterne-girls-1.webp",
               "shop_product22": ""
             }
+          },
+          "bbf2c5d2-a74e-4110-8247-dd0c6a6a3da0": {
+            "type": "shop_imgproducts1",
+            "settings": {
+              "image_autoheight_enable": true,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_img11": "shopify:\/\/shop_images\/DAY_02_SHOT_10_0080_copy_cd0ae159-81f4-44f8-a399-196f0873d91d.jpg",
+              "shop_product11": ""
+            }
           }
         },
         "block_order": [
-          "ba555f0c-3865-4143-a29a-1f0ca0d88805"
+          "ba555f0c-3865-4143-a29a-1f0ca0d88805",
+          "bbf2c5d2-a74e-4110-8247-dd0c6a6a3da0"
         ],
         "settings": {
           "shop_margin_top": 0,
