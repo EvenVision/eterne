@@ -3833,6 +3833,31 @@
           "shop_margin_top": 0,
           "shop_margin_bottom": 25
         }
+      },
+      "styled-by-chloe-campaign-shop": {
+        "type": "styled-by-chloe-campaign-shop",
+        "blocks": {
+          "ba555f0c-3865-4143-a29a-1f0ca0d88805": {
+            "type": "shop_imgproducts2",
+            "settings": {
+              "image_autoheight_enable": false,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 7,
+              "shop_product_padding": 18,
+              "shop_img21": "shopify:\/\/shop_images\/DAY_02_SHOT_16_0020_color_720x_48e42f0b-0fa5-49f1-8fcb-fddd72730780.webp",
+              "shop_product21": "",
+              "shop_img22": "shopify:\/\/shop_images\/eterne-girls-1.webp",
+              "shop_product22": ""
+            }
+          }
+        },
+        "block_order": [
+          "ba555f0c-3865-4143-a29a-1f0ca0d88805"
+        ],
+        "settings": {
+          "shop_margin_top": 0,
+          "shop_margin_bottom": 25
+        }
       }
     },
     "content_for_index": [
