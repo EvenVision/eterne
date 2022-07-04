@@ -581,7 +581,7 @@
             "type": "shop_imgproducts3",
             "settings": {
               "image_autoheight_enable": true,
-              "product_grid_aspect_ratio": "1.33",
+              "product_grid_aspect_ratio": "0.75",
               "shop_product_margin": 0,
               "shop_product_padding": 0,
               "shop_product31": "long-sleeve-crewneck-dress-mini-cream",
