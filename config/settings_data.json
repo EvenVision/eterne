@@ -3968,9 +3968,9 @@
             "settings": {
               "image_autoheight_enable": true,
               "product_grid_aspect_ratio": "0.75",
-              "shop_product_margin": 10,
-              "shop_product_padding": 3,
-              "shop_img11": "shopify:\/\/shop_images\/19_4bd7cb80-3c90-4597-98b9-72dad745a050.jpg",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_img11": "shopify:\/\/shop_images\/19_copy.jpg",
               "shop_product11": ""
             }
           },
