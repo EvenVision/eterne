@@ -537,6 +537,18 @@
       "collection-shop": {
         "type": "collection-shop",
         "blocks": {
+          "206d0db3-9255-4009-9804-2a77d20634f8": {
+            "type": "shop_imgproducts3",
+            "settings": {
+              "image_autoheight_enable": true,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_product31": "tank-dress-maxi-cream",
+              "shop_product32": "tank-dress-maxi-heather-grey",
+              "shop_product33": "tank-dress-maxi-black"
+            }
+          },
           "38c334a8-3c5d-4314-8392-581857f81346": {
             "type": "shop_imgproducts3",
             "settings": {
@@ -562,19 +574,6 @@
               "shop_product31": "super-cropped-rib-tank-black",
               "shop_product32": "super-cropped-rib-tank-heather-grey",
               "shop_product33": "super-cropped-rib-tank-ivory"
-            }
-          },
-          "6fd71c8c-32f7-4b9c-81f5-32357fbd5b3c": {
-            "type": "shop_imgproducts2",
-            "settings": {
-              "image_autoheight_enable": false,
-              "product_grid_aspect_ratio": "0.75",
-              "shop_product_margin": 0,
-              "shop_product_padding": 0,
-              "shop_img21": "shopify:\/\/shop_images\/Untitled-2.jpg",
-              "shop_product21": "tank-dress-maxi-cream",
-              "shop_img22": "shopify:\/\/shop_images\/Untitled-1.jpg",
-              "shop_product22": "tank-dress-maxi-black"
             }
           },
           "dec54a19-cff5-4c27-b88a-9fc0f4db4561": {
@@ -1103,9 +1102,9 @@
           }
         },
         "block_order": [
+          "206d0db3-9255-4009-9804-2a77d20634f8",
           "38c334a8-3c5d-4314-8392-581857f81346",
           "d0760d23-e80b-4ead-b53a-c3622ec3d285",
-          "6fd71c8c-32f7-4b9c-81f5-32357fbd5b3c",
           "dec54a19-cff5-4c27-b88a-9fc0f4db4561",
           "73f7e148-b3a8-4bd0-bfb0-a2bf1d80bf71",
           "b4da56c3-1fce-45ca-a078-d21a2f587b6e",
@@ -3830,6 +3829,36 @@
           "5a0eb985-57c8-4ead-8913-79251f2f9431"
         ],
         "settings": {
+          "shop_margin_top": 0,
+          "shop_margin_bottom": 25
+        }
+      },
+      "gift-card-collection": {
+        "type": "gift-card-collection",
+        "blocks": {
+          "6ca4b996-e8d0-4d98-aa40-22417892752d": {
+            "type": "shop_porproducts1",
+            "settings": {
+              "image_autoheight_enable": true,
+              "product_grid_aspect_ratio": "0.75",
+              "shop_product_margin": 0,
+              "shop_product_padding": 0,
+              "shop_product1p": "rise-ai-giftcard"
+            }
+          }
+        },
+        "block_order": [
+          "6ca4b996-e8d0-4d98-aa40-22417892752d"
+        ],
+        "settings": {
+          "show_image": true,
+          "image_height": "use_screen_one_third",
+          "overlay_opacity": 20,
+          "parallax": false,
+          "align_text": "text-center",
+          "show_title": true,
+          "show_description": true,
+          "description_font_size": "rte rte--large",
           "shop_margin_top": 0,
           "shop_margin_bottom": 25
         }
