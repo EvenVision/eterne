@@ -83,13 +83,13 @@
 {% endif %}
 
 
-<div data-section-id="{{ section.id }}" data-section-type="parallax">       
+<div data-section-id="{{ section.id }}" data-section-type="parallax">
   <div class="ev-shop-hero aos-init aos-animate lazyload fade-in" data-aos="fade-up" >
     <img src="{{ 'shop-hero-2.jpg' | asset_url }}" alt="woman lounging" >
   </div>
-  <div class="collection sidebar--hidden" data-sidebar-toggle>    
-    <div class="wrapper"> 
-      <div class="collection__heading--below">        
+  <div class="collection sidebar--hidden" data-sidebar-toggle>
+    <div class="wrapper">
+      <div class="collection__heading--below">
         {%- if section.settings.show_title -%}
         <h1 class="collection__heading--below title--flex {{ section.settings.align_text }}">{{ collection.title }}</h1>
         {%- endif -%}
@@ -100,9 +100,9 @@
         {%- endif -%}
       </div>
 	  <div class="grid">
-        <div class="grid__item collection-content one-whole">          
-          <div class="grid-uniform">            
-              {% for block in section.blocks %}  
+        <div class="grid__item collection-content one-whole">
+          <div class="grid-uniform">
+              {% for block in section.blocks %}
             	{%- assign handle = "" -%}
             	<div class="custom-shop-grid grid grid--full aos-init aos-animate" data-aos="fade-up" style="margin-top:{{section.settings.shop_margin_top}}px;">
                   <div style="margin:{{block.settings.shop_product_margin}}px;padding:{{block.settings.shop_product_padding}}px;">
@@ -111,7 +111,7 @@
                       <div class="single_row">
                           {%- assign grid_width_large = 'large--one-half' -%}
                           {%- assign grid_width_medium = 'medium--one-half' -%}
-                          {%- assign grid_width_small = 'small--one-whole' -%}       
+                          {%- assign grid_width_small = 'small--one-whole' -%}
 
                           {%- assign handle = block.settings.shop_product1 -%}
                           {% for product in collections.shop.products %}
@@ -120,26 +120,26 @@
                             {% endif %}
                           {% endfor %}
                           {%- assign feature_image = block.settings.shop_img1 -%}
-                          {% include 'custom-collection-grid-item' %} 
+                          {% include 'custom-collection-grid-item' %}
                       </div>
                     {%- when "shop_porproducts1" -%}
                       <div class="single_row_portrait">
                           {%- assign grid_width_large = 'large--one-half' -%}
                           {%- assign grid_width_medium = 'medium--one-half' -%}
-                          {%- assign grid_width_small = 'small--one-whole' -%}       
+                          {%- assign grid_width_small = 'small--one-whole' -%}
 
                           {%- assign handle = block.settings.shop_product1p -%}
                           {%- assign feature_image = block.settings.shop_img1p -%}
-                          {% include 'custom-collection-grid-item' %} 
+                          {% include 'custom-collection-grid-item' %}
                       </div>
                     {%- when "shop_products2" -%}
                         {%- assign grid_width_large = 'large--one-half' -%}
                         {%- assign grid_width_medium = 'medium--one-half' -%}
-                        {%- assign grid_width_small = 'small--one-whole' -%}    
-                    
+                        {%- assign grid_width_small = 'small--one-whole' -%}
+
                         {%- assign handle = block.settings.shop_product21 -%}
                         {% include 'product-shop-grid-item-2' %}
-                        {%- assign handle = block.settings.shop_product22 -%}                    
+                        {%- assign handle = block.settings.shop_product22 -%}
                         {% include 'product-shop-grid-item-2' %}
                       {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -154,13 +154,13 @@
                           {% endif %}
                         {% endfor %}
                         {% include 'custom-collection-grid-item' %}
-                    
-                    
+
+
                     {%- when "shop_imgproducts2" -%}
                         {%- assign grid_width_large = 'large--one-half' -%}
                         {%- assign grid_width_medium = 'medium--one-half' -%}
-                        {%- assign grid_width_small = 'small--one-whole' -%}       
-                    
+                        {%- assign grid_width_small = 'small--one-whole' -%}
+
                     	{%- assign handle = block.settings.shop_product21 -%}
                         {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -168,7 +168,7 @@
                           {% endif %}
                         {% endfor %}
                       {%- assign feature_image = block.settings.shop_img21 -%}
-                        {% include 'custom-collection-grid-item' %}                        
+                        {% include 'custom-collection-grid-item' %}
                       {%- assign handle = block.settings.shop_product22 -%}
                         {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -176,13 +176,13 @@
                           {% endif %}
                         {% endfor %}
                       {%- assign feature_image = block.settings.shop_img22 -%}
-                        {% include 'custom-collection-grid-item' %}    
-                    
+                        {% include 'custom-collection-grid-item' %}
+
                     {%- when "shop_products3" -%}
                         {%- assign grid_width_large = 'large--one-third' -%}
                         {%- assign grid_width_medium = 'medium--one-third' -%}
-                        {%- assign grid_width_small = 'small--one-whole' -%}            
-                    
+                        {%- assign grid_width_small = 'small--one-whole' -%}
+
                         {%- assign handle = block.settings.shop_product31 -%}
                       {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -204,12 +204,12 @@
                           {% endif %}
                         {% endfor %}
                         {% include 'custom-collection-grid-item' %}
-                    
+
                     {%- when "shop_imgproducts3" -%}
                         {%- assign grid_width_large = 'large--one-third' -%}
                         {%- assign grid_width_medium = 'medium--one-third' -%}
-                        {%- assign grid_width_small = 'small--one-whole' -%}   
-                    
+                        {%- assign grid_width_small = 'small--one-whole' -%}
+
                     	{%- assign handle = block.settings.shop_product31 -%}
                     	{%- assign feature_image = block.settings.shop_img31 -%}
                       {% for product in collections.shop.products %}
@@ -225,7 +225,7 @@
                             {% assign product = product %}
                           {% endif %}
                         {% endfor %}
-                      {%- assign feature_image = block.settings.shop_img32 -%}                    
+                      {%- assign feature_image = block.settings.shop_img32 -%}
                         {% include 'custom-collection-grid-item' %}
                       {%- assign handle = block.settings.shop_product33 -%}
                       {% for product in collections.shop.products %}
@@ -235,12 +235,12 @@
                         {% endfor %}
                       {%- assign feature_image = block.settings.shop_img33 -%}
                         {% include 'custom-collection-grid-item' %}
-                    
+
                     {%- when "shop_products4" -%}
                         {%- assign grid_width_large = 'large--one-quarter' -%}
                         {%- assign grid_width_medium = 'medium--one-quarter' -%}
                         {%- assign grid_width_small = 'small--one-half' -%}
-                    
+
                         {%- assign handle = block.settings.shop_product41 -%}
                       {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -269,12 +269,12 @@
                           {% endif %}
                         {% endfor %}
                         {% include 'custom-collection-grid-item' %}
-                    
+
                     {%- when "shop_imgproducts4" -%}
                         {%- assign grid_width_large = 'large--one-quarter' -%}
                         {%- assign grid_width_medium = 'medium--one-quarter' -%}
-                        {%- assign grid_width_small = 'small--one-half' -%}  
-                    
+                        {%- assign grid_width_small = 'small--one-half' -%}
+
                     	{%- assign handle = block.settings.shop_product41 -%}
                       {% for product in collections.shop.products %}
                           {% if product.handle == handle %}
@@ -311,29 +311,29 @@
                           {% endif %}
                         {% endfor %}
                       {%- assign feature_image = block.settings.shop_img44 -%}
-                        {% include 'custom-collection-grid-item' %}            
+                        {% include 'custom-collection-grid-item' %}
                   {%- endcase -%}
                   </div>
             	</div>
             	<div style="clear:both;"></div>
-            
+
               {% endfor %}
           </div>
       </div>
       </div>
     </div>
 </div>
-  
+
 {% endpaginate %}
-  
+
 <script>
   $(document).ready(function(){
     $('.grid__item_frame').each(function(){
-    $(this).css( "height", this.clientWidth * 1.33 ); });   
+    $(this).css( "height", this.clientWidth * 1.33 ); });
     $('.single_row .grid__item_frame').each(function(){
-    $(this).css( "height !important", "unset" ); }); 
+    $(this).css( "height !important", "unset" ); });
     $('.single_row_portrait .grid__item_frame').each(function(){
-    $(this).css( "height !important", "unset" ); }); 
+    $(this).css( "height !important", "unset" ); });
   });
 </script>
 
@@ -344,7 +344,7 @@
     {
        "type": "header",
        "content": "Layout"
-     }, 
+     },
      {
        "type": "select",
        "id": "align_text",
@@ -396,11 +396,11 @@
       "step":    5,
       "label":   "Bottom Margin (px per row)",
       "default": 25
-    }  
+    }
     ],
     "blocks": [
     {
-      "type": "shop_products2",	  
+      "type": "shop_products2",
       "name": "Products x 2",
       "settings": [
         {
@@ -410,15 +410,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },    
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -436,7 +442,7 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "product",
           "id": "shop_product21",
@@ -448,9 +454,9 @@
           "label": "Product 2"
         }
       ]
-    },    
+    },
     {
-      "type": "shop_products3",	  
+      "type": "shop_products3",
       "name": "Products x 3",
       "settings": [
         {
@@ -460,15 +466,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -486,7 +498,7 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product31",
@@ -505,7 +517,7 @@
       ]
     },
     {
-      "type": "shop_products4",	  
+      "type": "shop_products4",
       "name": "Products x 4",
       "settings": [
         {
@@ -515,15 +527,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -541,7 +559,7 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "product",
           "id": "shop_product41",
@@ -565,7 +583,7 @@
       ]
     },
   	{
-      "type": "shop_imgproducts1",	  
+      "type": "shop_imgproducts1",
       "name": "Images with Products x 1",
       "settings": [
         {
@@ -575,15 +593,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -601,12 +625,12 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "image_picker",
           "id": "shop_img1",
           "label": "Image"
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product1",
@@ -615,7 +639,7 @@
       ]
     },
     {
-      "type": "shop_porproducts1",	  
+      "type": "shop_porproducts1",
       "name": "Port with Products x 1",
       "settings": [
         {
@@ -625,15 +649,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -651,21 +681,21 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "image_picker",
           "id": "shop_img1p",
           "label": "Image"
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product1p",
           "label": "Product"
         }
       ]
-    },  
+    },
     {
-      "type": "shop_imgproducts2",	  
+      "type": "shop_imgproducts2",
       "name": "Images with Products x 2",
       "settings": [
         {
@@ -675,15 +705,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -701,12 +737,12 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "image_picker",
           "id": "shop_img21",
           "label": "Image 1"
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product21",
@@ -716,16 +752,16 @@
           "type": "image_picker",
           "id": "shop_img22",
           "label": "Image 2"
-        },   
+        },
 		{
           "type": "product",
           "id": "shop_product22",
           "label": "Product 2"
         }
       ]
-    },    
+    },
     {
-      "type": "shop_imgproducts3",	  
+      "type": "shop_imgproducts3",
       "name": "Images with Products x 3",
       "settings": [
         {
@@ -735,15 +771,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -761,12 +803,12 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },  
+        },
         {
           "type": "image_picker",
           "id": "shop_img31",
           "label": "Image 1"
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product31",
@@ -776,7 +818,7 @@
           "type": "image_picker",
           "id": "shop_img32",
           "label": "Image 2"
-        },    
+        },
 		{
           "type": "product",
           "id": "shop_product32",
@@ -786,7 +828,7 @@
           "type": "image_picker",
           "id": "shop_img33",
           "label": "Image 3"
-        },    
+        },
 		{
           "type": "product",
           "id": "shop_product33",
@@ -795,7 +837,7 @@
       ]
     },
     {
-      "type": "shop_imgproducts4",	  
+      "type": "shop_imgproducts4",
       "name": "Images with Products x 4",
       "settings": [
         {
@@ -805,15 +847,21 @@
           "default": true
         },
         {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
           "type": "select",
           "id": "product_grid_aspect_ratio",
           "label": "Product Grid Aspect Ratio",
           "default": "0.75",
           "options": [
             { "value": "1.33", "label": "Landscape"},
-            { "value": "0.75", "label": "Portrait"}         
+            { "value": "0.75", "label": "Portrait"}
           ]
-        },  
+        },
         {
           "type":    "range",
           "id":      "shop_product_margin",
@@ -831,12 +879,12 @@
           "step":    1,
           "label":   "Padding",
           "default": 0
-        },    
+        },
         {
           "type": "image_picker",
           "id": "shop_img41",
           "label": "Image 1"
-        },  
+        },
         {
           "type": "product",
           "id": "shop_product41",
@@ -846,7 +894,7 @@
           "type": "image_picker",
           "id": "shop_img42",
           "label": "Image 2"
-        },    
+        },
 		{
           "type": "product",
           "id": "shop_product42",
@@ -856,7 +904,7 @@
           "type": "image_picker",
           "id": "shop_img43",
           "label": "Image 3"
-        },    
+        },
         {
           "type": "product",
           "id": "shop_product43",
@@ -866,14 +914,14 @@
           "type": "image_picker",
           "id": "shop_img44",
           "label": "Image 4"
-        },    
+        },
 		{
           "type": "product",
           "id": "shop_product44",
           "label": "Product 4"
         }
       ]
-    }  
+    }
   ]
 }
 

@@ -1,4 +1,5 @@
 <!-- /sections/collection-shop.liquid -->
+
 {% paginate collection.products by 50 %}
 
 {%- assign grid_offset = '' -%}
@@ -145,7 +146,6 @@
             	<div class="custom-shop-grid grid grid--full aos-init aos-animate" data-aos="fade-up" style="margin-top:{{section.settings.shop_margin_top}}px;">
                   <div style="margin:{{block.settings.shop_product_margin}}px;padding:{{block.settings.shop_product_padding}}px;">
                   {%- case block.type -%}
-
                     {%- when "shop_imgproducts1" -%}
                       <div class="single_row">
                           {%- assign grid_width_large = 'large--one-half' -%}
@@ -153,7 +153,22 @@
                           {%- assign grid_width_small = 'small--one-whole' -%}
 
                           {%- assign handle = block.settings.shop_product1 -%}
+                          {% for product in collections.shop.products %}
+                            {% if product.handle == handle %}
+                              {% assign product = product %}
+                            {% endif %}
+                          {% endfor %}
                           {%- assign feature_image = block.settings.shop_img1 -%}
+                          {% include 'custom-collection-grid-item' %}
+                      </div>
+                    {%- when "shop_porproducts1" -%}
+                      <div class="single_row_portrait">
+                          {%- assign grid_width_large = 'large--one-half' -%}
+                          {%- assign grid_width_medium = 'medium--one-half' -%}
+                          {%- assign grid_width_small = 'small--one-whole' -%}
+
+                          {%- assign handle = block.settings.shop_product1p -%}
+                          {%- assign feature_image = block.settings.shop_img1p -%}
                           {% include 'custom-collection-grid-item' %}
                       </div>
                     {%- when "shop_products2" -%}
@@ -162,8 +177,18 @@
                         {%- assign grid_width_small = 'small--one-whole' -%}
 
                         {%- assign handle = block.settings.shop_product21 -%}
+                   		{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product22 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
 
                     {%- when "shop_imgproducts2" -%}
@@ -172,9 +197,19 @@
                         {%- assign grid_width_small = 'small--one-whole' -%}
 
                     	{%- assign handle = block.settings.shop_product21 -%}
+                        {% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img21 -%}
                         {% include 'custom-collection-grid-item' %}
                     	{%- assign handle = block.settings.shop_product22 -%}
+                        {% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img22 -%}
                         {% include 'custom-collection-grid-item' %}
 
@@ -184,10 +219,25 @@
                         {%- assign grid_width_small = 'small--one-whole' -%}
 
                         {%- assign handle = block.settings.shop_product31 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product32 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product33 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
 
                     {%- when "shop_imgproducts3" -%}
@@ -196,12 +246,27 @@
                         {%- assign grid_width_small = 'small--one-whole' -%}
 
                     	{%- assign handle = block.settings.shop_product31 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img31 -%}
                         {% include 'custom-collection-grid-item' %}
                     	{%- assign handle = block.settings.shop_product32 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img32 -%}
                         {% include 'custom-collection-grid-item' %}
                     	{%- assign handle = block.settings.shop_product33 -%}
+                   		{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img33 -%}
                         {% include 'custom-collection-grid-item' %}
 
@@ -211,12 +276,32 @@
                         {%- assign grid_width_small = 'small--one-half' -%}
 
                         {%- assign handle = block.settings.shop_product41 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product42 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product43 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product44 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
 
                     {%- when "shop_imgproducts4" -%}
@@ -225,17 +310,42 @@
                         {%- assign grid_width_small = 'small--one-half' -%}
 
                     	{%- assign handle = block.settings.shop_product41 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img41 -%}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product42 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img42 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product43 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img43 -%}
                         {% include 'custom-collection-grid-item' %}
                         {%- assign handle = block.settings.shop_product44 -%}
+                    	{% for product in collections.shop.products %}
+                          {% if product.handle == handle %}
+                          	{% assign product = product %}
+                          {% endif %}
+                        {% endfor %}
                     	{%- assign feature_image = block.settings.shop_img44 -%}
-                    	{% include 'custom-collection-grid-item' %}
+                        {% include 'custom-collection-grid-item' %}
                   {%- endcase -%}
                   </div>
             	</div>
@@ -255,13 +365,15 @@
     $('.grid__item_frame').each(function(){
     $(this).css( "height", this.clientWidth * 1.33 ); });
     $('.single_row .grid__item_frame').each(function(){
-    $(this).css( "height", "unset" ); });
+    $(this).css( "height", "unset !important" ); });
+    $('.single_row_portrait .grid__item_fram').each(function(){
+    $(this).css( "height", "unset !important" ); });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Custom Collection",
+  "name": "Gift card",
   "settings": [
     {
        "type": "header",
@@ -367,10 +479,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -423,10 +535,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -484,10 +596,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -539,7 +651,7 @@
         }
       ]
     },
-   {
+  	{
       "type": "shop_imgproducts1",
       "name": "Images with Products x 1",
       "settings": [
@@ -550,10 +662,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -596,6 +708,68 @@
       ]
     },
     {
+      "type": "shop_porproducts1",
+      "name": "Port with Products x 1",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "image_autoheight_enable",
+          "label": "Auto Height Enabled",
+          "default": true
+        },
+        {
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "image_reduce_enable",
+          "label": "Reduce image size by 10%",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "product_grid_aspect_ratio",
+          "label": "Product Grid Aspect Ratio",
+          "default": "0.75",
+          "options": [
+            { "value": "1.33", "label": "Landscape"},
+            { "value": "0.75", "label": "Portrait"}
+          ]
+        },
+        {
+          "type":    "range",
+          "id":      "shop_product_margin",
+          "min":     0,
+          "max":     50,
+          "step":    1,
+          "label":   "Margin",
+          "default": 0
+        },
+        {
+          "type":    "range",
+          "id":      "shop_product_padding",
+          "min":     0,
+          "max":     50,
+          "step":    1,
+          "label":   "Padding",
+          "default": 0
+        },
+        {
+          "type": "image_picker",
+          "id": "shop_img1p",
+          "label": "Image"
+        },
+        {
+          "type": "product",
+          "id": "shop_product1p",
+          "label": "Product"
+        }
+      ]
+    },
+    {
       "type": "shop_imgproducts2",
       "name": "Images with Products x 2",
       "settings": [
@@ -606,10 +780,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -672,10 +846,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",
@@ -748,10 +922,10 @@
           "default": true
         },
         {
-          "type": "checkbox",
-          "id": "full_size_pictures",
-          "label": "Disable fixed height for images",
-          "default": false
+        "type": "checkbox",
+        "id": "full_size_pictures",
+        "label": "Disable fixed height for images",
+        "default": false
         },
         {
           "type": "select",

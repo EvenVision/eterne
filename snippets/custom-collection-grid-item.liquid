@@ -10,7 +10,7 @@
   {%- assign sold_out = false -%}
 {%- endif -%}
 
-{%- assign new_product = false -%} 
+{%- assign new_product = false -%}
 {%- assign published_date = product.published_at | date: "%s"  -%}
 {%- assign now_date = 'now' | date: "%s" -%}
 {%- assign age_in_days = now_date | minus: published_date | divided_by: 60 | divided_by: 60 | divided_by: 12 -%}
@@ -65,34 +65,38 @@
 
 
 {%- assign ratio = product.featured_image.aspect_ratio -%}
-{%- assign multiplier = block.settings.product_grid_aspect_ratio | plus: 0 -%}  
+{%- assign multiplier = block.settings.product_grid_aspect_ratio | plus: 0 -%}
 {%- assign inverse_ratio = 1 | divided_by: multiplier -%}
+{%- assign reduce_img = block.settings.image_reduce_enable -%}
+{%- assign full_size_img = block.settings.full_size_pictures -%}
 
 <div class="grid__item {{handle}} {{ grid_offset }} {{ grid_width_small }} {{ grid_width_medium }} {{ grid_width_large }}{% if on_sale %} on-sale{% endif %}{% if tagged %} tagged{% endif %} product-grid-item">
-  
-  <div class="grid__item_frame" data-aspectratio="{{inverse_ratio}}">
-    <a href="{{ product.url }}" class="{{ product.handle }} lazy-image{% if double_img %} double__image{% endif %}" style="padding-top:{{ 1 | divided_by: feature_image.aspect_ratio | times: 100}}%; background-image:  url('{{ feature_image | img_url: '1x1' }}');">
-      <img class="lazyload lazypreload fade-in shop-grid-img"
-        alt="{{ product.title  }}"
-        src="{{ product_img }}"
-        data-original="{{ product_img }}"
-        data-src="{{ product_img }}"
-        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100, 4480]"
-        data-aspectratio="{{  feature_image.aspect_ratio }}"
-        data-sizes="auto" />
-      {% if double_img %}
-        <div class="collection__image__bottom lazyload" data-bgset="{% include 'bgset', image: product.images[1] %}"></div>
-      {% endif %}
-      {{ sticker }}
-    </a>
+
+  <div class="grid__item_frame {% if reduce_img %}auto-height{% endif %} {% if full_size_img %}auto-height{% endif %}" data-aspectratio="{{inverse_ratio}}">
+    <div {% if reduce_img %}style="max-width: 90%; width: 100%; margin: 0 auto" {% endif %}>
+      <a href="{{ product.url }}" class="{{ product.handle }} lazy-image{% if double_img %} double__image{% endif %}" style="padding-top:{{ 1 | divided_by: feature_image.aspect_ratio | times: 100}}%; background-image:  url('{{ feature_image | img_url: '1x1' }}');">
+        <img class="lazyload lazypreload fade-in shop-grid-img"
+          alt="{{ product.title  }}"
+          src="{{ product_img }}"
+          data-original="{{ product_img }}"
+          data-src="{{ product_img }}"
+          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100, 4480]"
+          data-aspectratio="{{  feature_image.aspect_ratio }}"
+          data-sizes="auto" />
+        {% if double_img %}
+          <div class="collection__image__bottom lazyload" data-bgset="{% include 'bgset', image: product.images[1] %}"></div>
+        {% endif %}
+        {{ sticker }}
+      </a>
+    </div>
   </div>
-  
+
   <noscript>
     <a href="{{ product.url }}">
       <img src="{{ feature_image | img_url: '360x' }}" alt="{{ product.title  }}">
     </a>
   </noscript>
-  
+
   <div class="figcaption {{ settings.product_grid_style }} {{ settings.collection_text_alignment | default: 'text-center' }}">
     <a href="{{ product.url }}">
       <p class="h7 title name_wrapper">
@@ -113,9 +117,9 @@
         <span class="compare-at">
           <span class="money">{{ product.compare_at_price | money }}</span>
         </span>
-        {% endif %}        
-      </p>      
+        {% endif %}
+      </p>
     </a>
   </div>
 
-</div>  
+</div>
